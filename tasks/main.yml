@@ -1,0 +1,20 @@
+- name: Copy NetworkManager.conf to servers
+  copy:
+    dest: {{ path }}/NetworkManager.conf
+    owner: root
+    group: root
+    mode: '0644'
+  when:
+    ansible_distribution_file_variety: "RedHat"
+    ansible_distribution_major_version: "7"
+  notify:
+    - restart NetworkManager
+
+- name: Copy resolv.conf to servers
+  copy:
+    dest: /etc/resolv.conf
+    owner: root
+    group: root
+    mode: '0644'
+  notify:
+    - restart network
