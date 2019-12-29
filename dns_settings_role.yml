@@ -1,6 +1,6 @@
 ---
 
-- name: Install openldap packages playbook
+- name: role to change dns servers on clients
   hosts: all
   become: yes
 

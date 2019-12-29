@@ -1,7 +1,7 @@
 - name: Copy NetworkManager.conf to servers
   copy:
     src: NetworkManager.conf
-    dest: {{ path }}/NetworkManager.conf
+    dest: "{{ path }}/NetworkManager.conf"
     owner: root
     group: root
     mode: '0644'
