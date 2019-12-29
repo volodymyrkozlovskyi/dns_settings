@@ -1,5 +1,5 @@
 - name: restart NetworkManager
-  service:
+  systemd:
     name: NetworkManager
     state: restarted
 
